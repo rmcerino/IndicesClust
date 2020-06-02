@@ -1,5 +1,14 @@
 indices_clust <- function(data, min, max, m_fuzzy){
 
+  require(clValid)
+  require(cluster)
+  require(devtools)
+  require(e1071)
+  require(tibble)
+  require(caret)
+  require(sf)
+  require(expss)
+
   if(min < 2){stop("Min tiene que ser mayor o igual a 2")}
 
   aux <- na.omit(data)
